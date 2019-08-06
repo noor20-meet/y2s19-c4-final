@@ -24,6 +24,10 @@ def cart_page():
 def checkout_page():
 	return render_template("checkout.html")
 
+@app.route('/category')
+def category_page():
+	return render_template("category.html")
+
 
 # Running the Flask app
 if __name__ == "__main__":
