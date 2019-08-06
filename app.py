@@ -28,6 +28,10 @@ def kids_page():
 def product_page():
 	return render_template('product.html')
 
+@app.route('/cart.html')
+def cart_page():
+	return render_template("cart.html")
+
 
 # Running the Flask app
 if __name__ == "__main__":
