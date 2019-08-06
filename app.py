@@ -2,8 +2,12 @@
 from flask import Flask, render_template, url_for, redirect, request, session
 
 # Add functions you need from databases.py to the next line!
+<<<<<<< HEAD
 from database import *
 from flask import session as login_session
+=======
+# from databases import add_student, get_all_students
+>>>>>>> 0a66a40f203091fea28ce4a6515add3a14d6301b
 
 # Starting the flask app
 app = Flask(__name__)
@@ -17,23 +21,11 @@ app.config['SECRET_KEY'] = 'you-will-never-guess'
 def home():
     return render_template('index.html')
 
-@app.route('/women')
-def women_page():
-	return render_template('women.html')
-
-@app.route('/men')
-def men_page():
-	return render_template('men.html')
-
-@app.route('/kids')
-def kids_page():
-	return render_template('kids.html')
-
 @app.route('/product')
 def product_page():
 	return render_template('product.html')
 
-@app.route('/cart.html')
+@app.route('/cart')
 def cart_page():
 	items_dic = get_items(login_session['user_id'])
 	print(login_session['user_id'],"user id",items_dic)
@@ -66,6 +58,25 @@ def login():
 		return render_template('login.html')
 
 
+
+
+
+@app.route('/contact')
+def contact_page():
+	return render_template("contact.html")
+
+@app.route('/about')
+def about_page():
+	return render_template("about.html")
+
+
+@app.route('/checkout')
+def checkout_page():
+	return render_template("checkout.html")
+
+@app.route('/category')
+def category_page():
+	return render_template("category.html")
 
 
 
