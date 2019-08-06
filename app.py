@@ -20,6 +20,16 @@ def product_page():
 def cart_page():
 	return render_template("cart.html")
 
+
+@app.route('/contact')
+def contact_page():
+	return render_template("contact.html")
+
+@app.route('/about')
+def about_page():
+	return render_template("about.html")
+
+
 @app.route('/checkout')
 def checkout_page():
 	return render_template("checkout.html")
@@ -27,6 +37,7 @@ def checkout_page():
 @app.route('/category')
 def category_page():
 	return render_template("category.html")
+
 
 
 # Running the Flask app
