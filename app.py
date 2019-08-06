@@ -2,7 +2,7 @@
 from flask import Flask, render_template, url_for, redirect, request, session
 
 # Add functions you need from databases.py to the next line!
-from databases import add_student, get_all_students
+# from databases import add_student, get_all_students
 
 # Starting the flask app
 app = Flask(__name__)
@@ -31,6 +31,7 @@ def product_page():
 @app.route('/cart.html')
 def cart_page():
 	return render_template("cart.html")
+
 
 
 # Running the Flask app
