@@ -526,7 +526,8 @@ section
 }
 .cart
 {
-	margin-right: 29px;
+	margin-right: 40px;
+	margin-left: 20px;
 }
 .cart a > div
 {

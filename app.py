@@ -12,26 +12,17 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/women')
-def women_page():
-	return render_template('women.html')
-
-@app.route('/men')
-def men_page():
-	return render_template('men.html')
-
-@app.route('/kids')
-def kids_page():
-	return render_template('kids.html')
-
 @app.route('/product')
 def product_page():
 	return render_template('product.html')
 
-@app.route('/cart.html')
+@app.route('/cart')
 def cart_page():
 	return render_template("cart.html")
 
+@app.route('/checkout')
+def checkout_page():
+	return render_template("checkout.html")
 
 
 # Running the Flask app
