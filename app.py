@@ -33,6 +33,7 @@ def cart_page():
 	return render_template("cart.html")
 
 
+
 # Running the Flask app
 if __name__ == "__main__":
     app.run(debug=True)
