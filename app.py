@@ -20,7 +20,6 @@ def product_page():
 def cart_page():
 	return render_template("cart.html")
 
-
 @app.route('/contact')
 def contact_page():
 	return render_template("contact.html")
