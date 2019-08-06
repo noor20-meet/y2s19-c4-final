@@ -2,12 +2,10 @@
 from flask import Flask, render_template, url_for, redirect, request, session
 
 # Add functions you need from databases.py to the next line!
-<<<<<<< HEAD
+
 from database import *
 from flask import session as login_session
-=======
-# from databases import add_student, get_all_students
->>>>>>> 0a66a40f203091fea28ce4a6515add3a14d6301b
+
 
 # Starting the flask app
 app = Flask(__name__)
