@@ -15,6 +15,10 @@ def add_user(name,secret_word):
 	session.add(user)
 	session.commit()
 
+def add_item(item_id,user_id):
+	cart_item = CartItem(item_id=item_id , user_id=user_id)
+	session.add(cart_item)
+	session.commit()
 
 
 def get_user(username):

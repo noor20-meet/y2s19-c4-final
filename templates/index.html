@@ -47,7 +47,11 @@
 	<!-- Contact Info -->
 	<div class="menu_contact">
 		<div class="menu_phone d-flex flex-row align-items-center justify-content-start">
-			<div style="padding-left:1px;"><a href="#">Log in</a> </div>
+			{%if session['logged-in'] %}
+			dfs
+			{%else%}
+			<div  style="padding-left:1px;"><a href="/login">Log in</a> </div>
+			{%endif%}
 		</div>
 		<div class="menu_social">
 			<ul class="menu_social_list d-flex flex-row align-items-start justify-content-start">
@@ -98,7 +102,11 @@
 				<div class="cart"><a href="cart"><div><img src="/static/images/cart.svg" alt="https://www.flaticon.com/authors/freepik"><div>4</div></div></a></div>
 				<!-- Phone -->
 				<div class="header_phone d-flex flex-row align-items-center justify-content-start">
-					<div style="padding-left:1px;"><a href="#">Log in</a> </div>
+					{%if session['logged_in'] %}
+					{{session["name"]}}
+					{%else%}
+					<div  style="padding-left:1px;"><a href="/login">Log kjh in</a> </div>
+					{%endif%}
 
 				</div>
 			</div>
@@ -154,10 +162,12 @@
 																</div>
 																<div class="product_buttons">
 																	<div class="text-right d-flex flex-row align-items-start justify-content-start">
-																		
-																		 <div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center" style="width: 100%">
-																			<div><div><img src="/static/images/cart_2.svg" alt=""><div>+</div></div></div>
-																		</div>
+																		<form action="/add/1" method = "post">
+
+																			 <div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center" onclick = "this.parentNode.submit()" style="width: 100%">
+																				<div><div><img src="/static/images/cart_2.svg" alt=""><div>+</div></div></div>
+																			</div>
+																		</form>
 																	</div>
 																</div>
 															</div>

@@ -17,7 +17,8 @@ app.config['SECRET_KEY'] = 'you-will-never-guess'
 # App routing code here
 @app.route('/')
 def home():
-    return render_template('index.html')
+	print(login_session)
+	return render_template('index.html')
 
 @app.route('/product')
 def product_page():
@@ -74,6 +75,12 @@ def checkout_page():
 @app.route('/category')
 def category_page():
 	return render_template("category.html")
+
+@app.route('/add/<int:item_id>', methods=['POST',"GET"])
+def add(item_id):
+	user_id =login_session['user_id']
+	add_item(item_id,user_id)
+	return home()
 
 
 
