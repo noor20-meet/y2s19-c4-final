@@ -26,6 +26,7 @@ def product_page():
 
 @app.route('/cart')
 def cart_page():
+
 	items_dic = get_items(login_session['user_id'])
 	print(login_session['user_id'],"user id",items_dic)
 	items = []
